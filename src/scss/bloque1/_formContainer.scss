@@ -140,7 +140,7 @@
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     border-left: 2px solid v.$secundario;
-    height: 16rem;
+    height: 11rem;
 }
 
 .item__left__movil {
@@ -156,23 +156,27 @@
             // padding-top: 2rem;
             padding-left: 1rem;
             color: white;
+            @include m.phone_360 {
+                padding-left: 1.3rem;
+            }
             @include m.phone_ios12_390 {
                 padding-left: 1.5rem;
             }
             h3 {
                 font-size: 1rem;
                 margin: 0;
+                text-align: left;
             }
         } 
     }
 }
 
 .left__logo--movil {
-    background: center/contain no-repeat url(../img/uni_javeriana_white.webp);
+    background: center/contain no-repeat url(../img/javeriana.webp);
 }
 
 .item__right__movil {
-    width: 20rem;
+    width: 100%;
     display: flex;
     align-items: center;
     position: relative;
@@ -182,14 +186,24 @@
         width: 17rem;
         background-color: v.$secundario;
         position: relative;
+        @include m.desktop_1020 {
+            width: 24rem;
+            height: 5.7rem;
+        }
         h3 {
             display: flex;
             align-items: center;
             height: 100%;
             margin: 0;
             font-weight: 900;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             padding-left: 5rem;
+            text-align: left;
+            @include m.desktop_1020 {
+                font-size: 1.8rem;
+                padding-left: 6rem;
+                line-height: 1.1;
+            }
             &::before {
                 content: '';
                 background: center/contain no-repeat url(../img/icon-black.webp);
@@ -198,6 +212,12 @@
                 position: absolute;
                 left: 1.3rem;
                 top: .15rem;
+                @include m.desktop_1020 {
+                    top: .3rem;
+                    width: 4rem;
+                    height: 5rem;
+                    left: 1.4rem;
+                }
             }
         }
     }

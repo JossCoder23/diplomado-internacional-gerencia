@@ -42,7 +42,7 @@
         width: 35%;
     }
     @include m.desktop_1020 {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: none;
         width: 90%;
     }
