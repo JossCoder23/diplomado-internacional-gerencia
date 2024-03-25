@@ -32,7 +32,7 @@
     grid-column: 2 / 6;
     grid-row: 1 / 2;
     border-top: 2px solid v.$secundario;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     h3 {   
         span {
@@ -121,21 +121,18 @@
     grid-column: 1 / 6;
     grid-row: 2 / 3;
     justify-content: center;
-    padding-left: 5rem;
+    padding-left: 10rem;
     @include m.desktop_1280 {
-        padding-left: 10rem;
+        padding-left: 15rem;
     }
-    @include m.desktop_1440 {
-        padding-left: 9rem;
-    }
-    @include m.desktop_1520 {
-        padding-left: 11rem;
-    }
+    // @include m.desktop_1520 {
+    //     padding-left: 11rem;
+    // }
     @include m.desktop_1720 {
-        padding-left: 13rem;
+        padding-left: 18rem;
     }
     @include m.desktop_1920 {
-        padding-left: 11rem;
+        padding-left: 20rem;
     }
     // @include m.desktop_1280 {
     //     padding: 0 10rem;
@@ -161,27 +158,38 @@
 }
 
 .item__left {
-    width: 25rem;
+    width: 30rem;
     display: flex;
     align-items: center;
+    @include m.desktop_1920 {
+        width: 35rem;
+    }
     .left__container {
-        height: 8rem;
+        // background-color: red;
+        height: 15rem;
         width: 100%;
         display: grid;
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 30% 70%;
         .left__title {
             padding-top: 2rem;
             color: white;
             h3 {
                 font-size: 1rem;
                 margin: 0;
+                @include m.desktop_1280 {
+                    font-size: 1.3rem;
+                }
+                @include m.desktop_1920 {
+                    font-size: 1.5rem;
+                }
             }
         } 
     }
 }
 
 .left__logo {
-    background: center/contain no-repeat url(../img/uni_javeriana_white.webp);
+    background: center/contain no-repeat url(../img/javeriana_finish.webp);
+    margin-bottom: 3rem;
 }
 
 .item__right {
